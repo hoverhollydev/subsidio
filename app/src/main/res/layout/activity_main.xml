@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/geoservicar">
+
+    <include layout="@layout/tool_bar"/>
+
+    <RelativeLayout
+        android:layout_marginTop="62dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="3dp"
+        android:layout_marginLeft="3dp"
+
+        android:background="@drawable/background_spinner"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinner_despachadores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:theme="@style/Spinner"
+            android:gravity="center"
+            android:layout_marginRight="0dp"
+            android:spinnerMode="dropdown" />
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="1dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@mipmap/ic_drop"
+            android:backgroundTint="@color/white"/>
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+
+        android:layout_marginTop="113dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:orientation="vertical"
+        android:nestedScrollingEnabled="true" />
+    </androidx.core.widget.NestedScrollView>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Spinner>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:layout_marginRight="56dp"
+        android:layout_marginTop="12dp"
+        android:src="@android:drawable/ic_input_add"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        app:fabCustomSize="34dp"
+        app:pressedTranslationZ="12dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:backgroundTint="@color/geoservicar"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

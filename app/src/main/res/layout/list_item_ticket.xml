@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="0dp"
+    android:elevation="2dp"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardPreventCornerOverlap="false"
+    android:id="@+id/cardview_group"
+
+    >
+
+    <RelativeLayout
+        android:id="@+id/content_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_shadow_end_color"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/content_bombas"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/background_spinner2"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinner_bombas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:theme="@style/Spinner"
+                android:backgroundTint="@color/white"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:layout_marginRight="0dp"
+                android:spinnerMode="dropdown" />
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="1dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_drop" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Orden 12345"
+            android:id="@+id/txt_ticketId"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/purpura"
+            android:layout_toRightOf="@id/content_bombas"
+            />
+
+        <ImageView
+            android:id="@+id/img_placaOCR"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/content_bombas"
+            android:background="@drawable/round_image"
+            android:backgroundTint="@color/cardview_shadow_start_color"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/txt_placaOCR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Placa OCR . . ."
+            android:textColor="@color/black_icon"
+            android:textStyle="bold"
+            android:layout_marginTop="3dp"
+            android:layout_below="@id/content_bombas"
+            android:layout_toRightOf="@id/img_placaOCR"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/txt_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:textSize="11sp"
+            android:layout_marginTop="3dp"
+            android:layout_below="@id/txt_placaOCR"
+            android:layout_toRightOf="@id/img_placaOCR"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/txt_modelo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:textSize="11sp"
+            android:layout_marginTop="3dp"
+            android:layout_below="@id/txt_color"
+            android:layout_toRightOf="@id/img_placaOCR"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/txt_propietario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="..."
+            android:textSize="11sp"
+            android:layout_marginTop="3dp"
+            android:layout_below="@id/txt_modelo"
+            android:layout_toRightOf="@id/img_placaOCR"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_placaSugerida"
+            android:hint="Placa sugerida"
+            android:layout_below="@id/img_placaOCR">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etxt_placaSugerida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13.5sp"
+                android:enabled="false"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/txt_unidades_subsidio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Galones: 0   CS: $0   SS: $0"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="2dp"
+            android:textSize="12.5sp"
+            android:textStyle="bold"
+            android:textColor="@color/black_icon"
+            android:layout_below="@id/txt_placaSugerida"
+            android:gravity="right"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:id="@+id/tipo_combustible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/txt_unidades_subsidio">
+
+
+            <CheckBox
+                android:id="@+id/ckb_diesel"
+                android:layout_weight="2.5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/purpura"
+                android:text="Diesel" />
+
+            <CheckBox
+                android:id="@+id/ckb_eco"
+                android:layout_weight="2.5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/purpura"
+                android:text="Eco" />
+
+            <CheckBox
+                android:id="@+id/ckb_extra"
+                android:layout_weight="2.5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/purpura"
+                android:text="Extra" />
+
+            <CheckBox
+                android:id="@+id/ckb_super"
+                android:layout_weight="2.5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/purpura"
+                android:text="Super" />
+
+        </LinearLayout>
+
+
+
+
+        <TextView
+            android:id="@+id/txt_detalle_consumoCS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CS $0"
+            android:layout_marginTop="5dp"
+            android:textSize="12.5sp"
+            android:textStyle="bold"
+            android:textColor="@color/black_icon"
+            android:layout_below="@id/tipo_combustible"
+            android:gravity="right"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/txt_detalle_consumoSS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SS $0"
+            android:layout_marginTop="0dp"
+            android:textSize="12.5sp"
+            android:textStyle="bold"
+            android:textColor="@color/black_icon"
+            android:layout_below="@id/txt_detalle_consumoCS"
+            android:gravity="right"
+            android:layout_centerVertical="true"/>
+
+        <Switch
+            android:id="@+id/tipo_ingresoCS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_detalle_consumoSS"
+            android:text="CS "
+            android:layout_marginTop="15dp"/>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_valor_tipoCS"
+            android:layout_marginLeft="1dp"
+            android:hint="N. Galones"
+            android:layout_below="@id/txt_detalle_consumoSS"
+            android:layout_toRightOf="@id/tipo_ingresoCS">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_valorCS"
+                android:textSize="13.5sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionDone"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Switch
+            android:id="@+id/tipo_ingresoSS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tipo_ingresoCS"
+            android:text="SS "
+            android:layout_marginTop="15dp"/>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_valor_tipoSS"
+            android:layout_marginLeft="1dp"
+            android:hint="N. Galones"
+            android:layout_below="@id/tipo_ingresoCS"
+            android:layout_toRightOf="@id/tipo_ingresoSS">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_valorSS"
+                android:textSize="13.5sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionDone"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btn_calcular"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:adjustViewBounds="false"
+            android:layout_below="@+id/txt_detalle_consumoSS"
+            android:layout_toRightOf="@id/txt_valor_tipoCS"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/circle_gasoline" />
+
+        <TextView
+            android:id="@+id/txt_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TOTAL: $0"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="12dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black_icon"
+            android:layout_below="@+id/txt_detalle_consumoSS"
+            android:layout_toRightOf="@id/btn_calcular"
+            android:gravity="right"
+            android:layout_centerVertical="true"/>
+
+
+
+        <Button
+            android:id="@+id/btn_imprimir"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:adjustViewBounds="false"
+
+            android:layout_below="@+id/txt_total"
+            android:layout_toLeftOf="@id/btn_reenviar"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/circle_imprimir" />
+
+        <Button
+            android:id="@+id/btn_reenviar"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:adjustViewBounds="false"
+            android:layout_below="@+id/txt_total"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/circle_reenviar" />
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

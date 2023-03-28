@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/reconectar"
+        android:launchMode="singleTop"
+        android:title="@string/str_reconectar"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/cerrar_sesion"
+        android:launchMode="singleTop"
+        android:title="@string/str_cerrar_sesion"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/acerca_de"
+        android:title="@string/str_acerca_de"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/salir"
+        android:launchMode="singleTop"
+        android:title="@string/str_salir"
+        app:showAsAction="never"/>
+</menu>

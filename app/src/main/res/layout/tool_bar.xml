@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    android:background="@color/black_icon">
+
+    <TextView
+        android:id="@+id/spinner_nav"
+        android:drawableLeft="@drawable/ic_icon_app3"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Control"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/spinner_nav1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Subsidio"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/green"
+
+        android:layout_gravity="left"/>
+</androidx.appcompat.widget.Toolbar>

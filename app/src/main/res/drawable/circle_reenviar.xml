@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/bg_layer">
+        <shape android:shape="oval">
+            <solid
+                android:color="@color/purpura"
+                />
+            <stroke
+                android:width="2dp"
+                android:color="@color/geoservicar" />
+            <corners
+                android:radius="0dp" />
+        </shape>
+    </item>
+
+    <item
+        android:id="@+id/ll_icon_group"
+        android:drawable="@drawable/ic_resend"
+        android:bottom="13dp"
+        android:left="11dp"
+        android:right="11dp"
+        android:top="9dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"/>
+</layer-list>
